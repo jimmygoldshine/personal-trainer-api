@@ -5,4 +5,9 @@ class WorkoutsController < ApplicationController
     render json: @workouts
   end
 
+  def create
+    @workout = Workout.create!
+    render json: @workout, status: :created
+  end
+
 end
