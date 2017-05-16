@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :exercise do
-    name { Faker::LeagueOfLegends.masteries }
+    name { Faker::Lorem.word }
+    workout_id nil
   end
 end
