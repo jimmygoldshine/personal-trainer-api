@@ -9,13 +9,14 @@ end
 gem 'rails', '~> 5.0.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-gem 'sqlite3'
+gem 'pg'
 
 group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'faker'
   gem 'database_cleaner'
+  gem 'pry'
 end
 
 group :development, :test do
