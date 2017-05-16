@@ -1,4 +1,5 @@
 require 'rails_helper'
+require './spec/support/request_helper.rb'
 
 RSpec.describe "Workouts-API", type: :request do
 
@@ -9,8 +10,7 @@ RSpec.describe "Workouts-API", type: :request do
     before { get '/workouts' }
 
     it "returns workouts" do
-      require 'pry'; binding.pry
-      expect(JSON.parse(response.body).size).to eq(5)
+      expect(json.size).to eq(5)
     end
 
   end
