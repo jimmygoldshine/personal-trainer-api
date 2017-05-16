@@ -2,17 +2,17 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.all
-    render json: @workouts
+    render_json(@workouts)
   end
 
   def show
     @workout = Workout.find(params[:id])
-    render json: @workout
+    render_json(@workout)
   end
 
   def create
     @workout = Workout.create!
-    render json: @workout, status: :created
+    render_json(@workouts, :created)
   end
 
 end
