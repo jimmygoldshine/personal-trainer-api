@@ -6,4 +6,10 @@ class ExercisesController < ApplicationController
     render_json(@exercises)
   end
 
+  def show
+    @workout = Workout.find(params[:workout_id])
+    @exercise = @workout.exercises.find(params[:id])
+    render_json(@exercise)
+  end
+
 end
