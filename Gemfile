@@ -17,6 +17,7 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
   gem 'pry'
+  gem 'simplecov', require: false
 end
 
 group :development, :test do

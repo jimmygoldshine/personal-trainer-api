@@ -7,7 +7,7 @@ RSpec.describe "Exercise-API", type: :request do
   let!(:exercise) { Exercise.first }
   let!(:id) { exercise.id }
 
-  describe "GET workouts/:id/exercises" do
+  describe "GET workouts/workout_id/exercises" do
 
     before { get "/workouts/#{workout.id}/exercises" }
 
@@ -21,7 +21,7 @@ RSpec.describe "Exercise-API", type: :request do
 
   end
 
-  describe "GET /workouts/workout_id/exercises/:id" do
+  describe "GET /workouts/workout_id/exercises/id" do
 
     before { get "/workouts/#{workout.id}/exercises/#{id}" }
 
@@ -45,6 +45,20 @@ RSpec.describe "Exercise-API", type: :request do
 
     it "should return the new exercise" do
       expect(json["name"]).to eq("Shoulder Press")
+    end
+
+  end
+
+  describe "PATCH /workouts/workout_id/exercises/id" do
+
+    before { patch "/workouts/#{workout.id}/exercises/#{id}", params: {name: "Bench Press"} }
+
+    it "should return status code 200" do
+      expect(response).to have_http_status(200)
+    end
+
+    it "should change the name of the excersise" do
+      expect(json["name"]).to eq("Bench Press")
     end
 
   end

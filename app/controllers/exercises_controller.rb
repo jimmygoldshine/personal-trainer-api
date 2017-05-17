@@ -18,6 +18,13 @@ class ExercisesController < ApplicationController
     render_json(@exercise, :created)
   end
 
+  def update
+    @workout = Workout.find(params[:workout_id])
+    @exercise = @workout.exercises.find(params[:id])
+    @exercise.update!(exercise_params)
+    render_json(@exercise)
+  end
+
   private
 
   def exercise_params
