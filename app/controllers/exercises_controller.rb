@@ -12,4 +12,16 @@ class ExercisesController < ApplicationController
     render_json(@exercise)
   end
 
+  def create
+    @workout = Workout.find(params[:workout_id])
+    @exercise = Exercise.create!(exercise_params)
+    render_json(@exercise, :created)
+  end
+
+  private
+
+  def exercise_params
+    params.permit(:name, :workout_id)
+  end
+
 end

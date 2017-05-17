@@ -35,4 +35,18 @@ RSpec.describe "Exercise-API", type: :request do
 
   end
 
+  describe "POST /workouts/workout_id/exercises" do
+
+    before { post "/workouts/#{workout.id}/exercises", params: {name: "Shoulder Press"} }
+
+    it "should return status code 201" do
+      expect(response).to have_http_status(201)
+    end
+
+    it "should return the new exercise" do
+      expect(json["name"]).to eq("Shoulder Press")
+    end
+
+  end
+
 end
