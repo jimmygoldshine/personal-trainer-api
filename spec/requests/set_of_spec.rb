@@ -48,4 +48,18 @@ RSpec.describe "SetOf-API", type: :request do
     end
   end
 
+  describe 'PATCH /workouts/workout_id/exercises/exercise_id/set_ofs/id' do
+
+    before { patch "/workouts/#{workout.id}/exercises/#{exercise.id}/set_ofs/#{set_of.id}", params: { weight: 5000, reps: 100 } }
+
+    it "should return status code 200" do
+      expect(response).to have_http_status(200)
+    end
+
+    it "should update the set_of resource" do
+      expect(json["weight"]).to eq(5000)
+      expect(json["reps"]).to eq(100)
+    end
+  end
+
 end

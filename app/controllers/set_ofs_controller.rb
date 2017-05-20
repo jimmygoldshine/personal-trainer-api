@@ -17,6 +17,12 @@ class SetOfsController < ApplicationController
     render_json(@set_of, :created)
   end
 
+  def update
+    @set_of = @exercise.set_ofs.find(params[:id])
+    @set_of.update_attributes!(set_of_params)
+    render_json(@set_of)
+  end
+
   private
 
   def get_exercise
