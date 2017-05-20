@@ -43,7 +43,7 @@ RSpec.describe "Exercise-API", type: :request do
       expect(response).to have_http_status(201)
     end
 
-    it "should return the new exercise" do
+    it "should create the new exercise" do
       expect(json["name"]).to eq("Shoulder Press")
     end
 

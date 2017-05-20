@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-05-20T14:15:01+01:00">2017-05-20T14:15:01+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-05-20T14:29:53+01:00">2017-05-20T14:29:53+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.15
+         2.25
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>33</b> files in total.
-    <b>218</b> relevant lines. 
-    <span class="green"><b>218</b> lines covered</span> and
+    <b>230</b> relevant lines. 
+    <span class="green"><b>230</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -67,7 +67,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>6.3</td>
+        <td>7.0</td>
       </tr>
       
       <tr>
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#e7e36837f2839480ce877aa6431ee13090c1a289" class="src_link" title="app/controllers/set_ofs_controller.rb">app/controllers/set_ofs_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
-        <td>11</td>
-        <td>11</td>
+        <td>30</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -277,7 +277,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>12.0</td>
+        <td>12.5</td>
       </tr>
       
       <tr>
@@ -287,7 +287,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>7.0</td>
+        <td>10.0</td>
       </tr>
       
       <tr>
@@ -337,7 +337,7 @@
         <td>25</td>
         <td>25</td>
         <td>0</td>
-        <td>2.9</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -353,11 +353,11 @@
       <tr>
         <td class="strong"><a href="#46c384a821bd16eeb8d52fe2c08ed412ecd2ee37" class="src_link" title="spec/requests/set_of_spec.rb">spec/requests/set_of_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>37</td>
-        <td>19</td>
-        <td>19</td>
+        <td>51</td>
+        <td>26</td>
+        <td>26</td>
         <td>0</td>
-        <td>2.1</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -377,7 +377,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>3.7</td>
+        <td>4.3</td>
       </tr>
       
     </tbody>
@@ -476,8 +476,8 @@
           <code class="ruby">  def render_json(object, status = :ok)</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="4">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="19" data-linenumber="4">
+          <span class="hits">19</span>
           
           <code class="ruby">    render json: object, status: status</code>
         </li>
@@ -743,8 +743,8 @@
     <h3>app/controllers/set_ofs_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -839,40 +839,94 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def create</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    @set_of = SetOf.create!(set_of_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
           
-          <code class="ruby">  def get_exercise</code>
+          <code class="ruby">    render_json(@set_of, :created)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="18">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    @exercise = Exercise.find(params[:exercise_id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def get_exercise</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="23">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    @exercise = Exercise.find(params[:exercise_id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def set_of_params</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    params.permit(:weight, :reps, :exercise_id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">end</code>
@@ -2510,8 +2564,8 @@
           <code class="ruby">  factory :exercise do</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="3">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="47" data-linenumber="3">
+          <span class="hits">47</span>
           
           <code class="ruby">    name { Faker::Lorem.word }</code>
         </li>
@@ -2564,14 +2618,14 @@
           <code class="ruby">  factory :set_of do</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="3">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="19" data-linenumber="3">
+          <span class="hits">19</span>
           
           <code class="ruby">    reps { Faker::Number.between(0,20) }</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="4">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="19" data-linenumber="4">
+          <span class="hits">19</span>
           
           <code class="ruby">    weight { Faker::Number.decimal(1) }</code>
         </li>
@@ -3050,14 +3104,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="37">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="26" data-linenumber="37">
+          <span class="hits">26</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="38">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="26" data-linenumber="38">
+          <span class="hits">26</span>
           
           <code class="ruby">      example.run</code>
         </li>
@@ -3521,7 +3575,7 @@
         <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should return the new exercise&quot; do</code>
+          <code class="ruby">    it &quot;should create the new exercise&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="47">
@@ -3653,8 +3707,8 @@
     <h3>spec/requests/set_of_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>26</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3686,26 +3740,26 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="5">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="5">
+          <span class="hits">7</span>
           
           <code class="ruby">  let!(:workout) { create(:workout) }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="6">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="6">
+          <span class="hits">7</span>
           
           <code class="ruby">  let!(:exercise) { create(:exercise, workout_id: workout.id) }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="7">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="7">
+          <span class="hits">7</span>
           
           <code class="ruby">  let!(:set_ofs) { create_list(:set_of, 3, exercise_id: exercise.id) }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="8">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="8">
+          <span class="hits">7</span>
           
           <code class="ruby">  let!(:set_of) { set_ofs.first }</code>
         </li>
@@ -3878,7 +3932,91 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;POST /workouts/workout_id/exercises/exercise_id/set_ofs&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="39">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    before { post &quot;/workouts/#{workout.id}/exercises/#{exercise.id}/set_ofs&quot;, params: { weight: &quot;1000&quot;, reps: &quot;50&quot; } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;should return status code 201&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(201)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;should create the new set_of&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(json[&quot;weight&quot;]).to eq(1000)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(json[&quot;reps&quot;]).to eq(50)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">end</code>
@@ -4220,8 +4358,8 @@
           <code class="ruby">  def json</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="4">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="4">
+          <span class="hits">11</span>
           
           <code class="ruby">    JSON.parse(response.body)</code>
         </li>

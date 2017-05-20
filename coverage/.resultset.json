@@ -49,8 +49,8 @@
         null,
         null,
         1,
-        24,
-        24,
+        26,
+        26,
         null,
         null,
         null,
@@ -272,7 +272,7 @@
       "/Users/jamesdix/Desktop/personal-trainer/personal-trainer-api/spec/factories/exercise.rb": [
         1,
         1,
-        45,
+        47,
         1,
         null,
         null
@@ -280,8 +280,8 @@
       "/Users/jamesdix/Desktop/personal-trainer/personal-trainer-api/spec/factories/set_of.rb": [
         1,
         1,
-        13,
-        13,
+        19,
+        19,
         null,
         null
       ],
@@ -305,7 +305,7 @@
         1,
         null,
         1,
-        9,
+        11,
         null,
         null,
         null
@@ -430,10 +430,10 @@
         null,
         1,
         null,
-        5,
-        5,
-        5,
-        5,
+        7,
+        7,
+        7,
+        7,
         null,
         1,
         null,
@@ -443,6 +443,20 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        3,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
         1,
         1,
         null,
@@ -562,7 +576,7 @@
         1,
         null,
         1,
-        17,
+        19,
         null,
         null,
         null
@@ -583,9 +597,18 @@
         null,
         null,
         1,
+        2,
+        2,
+        null,
         null,
         1,
-        4,
+        null,
+        1,
+        6,
+        null,
+        null,
+        1,
+        2,
         null,
         null,
         null
@@ -611,6 +634,6 @@
         null
       ]
     },
-    "timestamp": 1495286100
+    "timestamp": 1495286993
   }
 }
