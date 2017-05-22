@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20170516094247) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "exercises", force: :cascade do |t|
     t.string   "name"
     t.integer  "workout_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["workout_id"], name: "index_exercises_on_workout_id"
+    t.index ["workout_id"], name: "index_exercises_on_workout_id", using: :btree
   end
 
   create_table "set_ofs", force: :cascade do |t|
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170516094247) do
     t.integer  "exercise_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["exercise_id"], name: "index_set_ofs_on_exercise_id"
+    t.index ["exercise_id"], name: "index_set_ofs_on_exercise_id", using: :btree
   end
 
   create_table "workouts", force: :cascade do |t|
