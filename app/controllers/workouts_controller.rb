@@ -15,4 +15,9 @@ class WorkoutsController < ApplicationController
     render_json(@workouts, :created)
   end
 
+  def destroy
+    @workout = Workout.find(params[:id])
+    render_json(@workout)
+  end
+
 end

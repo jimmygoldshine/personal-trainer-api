@@ -44,4 +44,18 @@ RSpec.describe "Workouts-API", type: :request do
 
   end
 
+  describe 'DELETE /workouts/id' do
+
+    before { delete "/workouts/#{id}" }
+
+    it "should return status code 200" do
+      expect(response).to have_http_status(200)
+    end
+
+    it "should return deleted object" do
+      expect(json["id"]).to eq(id)
+    end
+
+  end
+
 end
