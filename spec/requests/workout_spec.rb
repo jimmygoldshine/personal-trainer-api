@@ -56,6 +56,11 @@ RSpec.describe "Workouts-API", type: :request do
       expect(json["id"]).to eq(id)
     end
 
+    it "should reduce workout list by 1" do
+      get '/workouts'
+      expect(json.size).to eq(4)
+    end
+
   end
 
 end

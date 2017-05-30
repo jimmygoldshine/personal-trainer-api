@@ -17,6 +17,7 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout = Workout.find(params[:id])
+    @workout.destroy
     render_json(@workout)
   end
 
